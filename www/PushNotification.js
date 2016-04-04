@@ -24,11 +24,11 @@ PushNotification.prototype.call_native = function (callback, name, args) {
     args = []
   }
   ret = cordova.exec(
-  callback, // called when signature capture is successful
-  this.failure, // called when signature capture encounters an error
-  'PushNotificationPlugin', // Tell cordova that we want to run "PushNotificationPlugin"
-  name, // Tell the plugin the action we want to perform
-  args); // List of arguments to the plugin
+  callback,
+  this.failure,
+  'PushNotificationPlugin',
+  name,
+  args);
   return ret;
 }
 
